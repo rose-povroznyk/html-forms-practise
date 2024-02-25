@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h2>Registration form</h2>
+      <form action="">
+        <label>
+          <span>First name</span>
+          <input
+            type="text"
+            name="first-name"
+            placeholder="Your name"
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            autofocus
+            required
+            tabindex="1"
+          />
+        </label>
+
+        <label>
+          <span>Last name</span>
+          <input
+            type="text"
+            name="last-name"
+            placeholder="Your last name"
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            tabindex="3"
+          />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="your@email" />
+        </label>
+        <label>
+          <span>Phone</span>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+380"
+            autocomplete
+            pattern="\+380\d{9}"
+            tabindex="2"
+          />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input
+            type="password"
+            name="password"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*_].*).{8,32}"
+          />
+        </label>
+
+        <label>
+          <span>Password confirmation</span>
+          <input
+            type="password"
+            name="password-confirmation"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*_].*).{8,32}"
+          />
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
+</html>
